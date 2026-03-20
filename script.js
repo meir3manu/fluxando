@@ -282,7 +282,8 @@ function renderTimeline(solicitacao){
 
   const historico = solicitacao.historico_fluxo || {};
   const indiceAtual = ETAPAS_FLUXO.findIndex(e => e.id === solicitacao.status_atual);
-  const setorAtual = solicitacao.responsavel_nome || ETAPAS_FLUXO.find(e => e.id === solicitacao.status_atual)?.setor
+  const setorAtual = solicitacao.responsavel_nome
+  console.log(setorAtual)
   console.log("indice atual: " + indiceAtual)
   const reprovado = solicitacao.status_atual === 'REPROVADO';
   const concluidoGeral = solicitacao.finalizado || solicitacao.status_atual === '10_FINALIZADO';
@@ -333,12 +334,14 @@ function renderTimeline(solicitacao){
 
     if (statusLabel === "processando")
       iconHtml = `<div class="etapa-icone mob-display-none flex justify-center align-items-center"><img width="50px" src="imgs/${etapa.id}.svg"></div>`
-    if(statusLabel === "processando" && (currentUser.setor === etapa.setor.toLowerCase() || currentUser.setor === "dev" || etapa.id === "9_DISTRIBUICAO")){
-      confirmarNegarBtns = `<div class="flex justify-end gap-5">
-                              <button onclick="handleAction(true, '${etapa.id}')" class="status-btn bg-concluido">Concluir Etapa</button>
-                              ${negarBtn}
-                            </div>`
-      enableObservacao = ""
+    if(statusLabel === "processando"){
+      if(currentUser.setor === etapa.setor.toLowerCase() || currentUser.setor === "dev" || etapa.id === "9_DISTRIBUICAO"){
+        confirmarNegarBtns = `<div class="flex justify-end gap-5">
+                                <button onclick="handleAction(true, '${etapa.id}')" class="status-btn bg-concluido">Concluir Etapa</button>
+                                ${negarBtn}
+                              </div>`
+        enableObservacao = ""
+      }
       let prev = new Date(solicitacao.data_abertura);
       prev.setDate(prev.getDate() + CONFIG.PREV_DIAS);
       prev = prev.toLocaleDateString('pt-BR')
