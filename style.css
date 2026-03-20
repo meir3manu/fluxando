@@ -82,6 +82,13 @@ body {
   .mob-display-none{
     display: none !important;
   }
+  .mob-display{
+    display: flex !important;
+    color: #282c45;
+  }
+}
+.pc-display-none{
+  display: none;
 }
 .qtd-pc{
     display: flex;
