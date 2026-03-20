@@ -332,7 +332,7 @@ function renderTimeline(solicitacao){
       negarBtn = `<button onclick="handleAction(false, '${etapa.id}')" class="status-btn bg-negado">Negar</button>`
 
     if (statusLabel === "processando")
-      iconHtml = `<div class="etapa-icone flex justify-center align-items-center"><img width="50px" src="imgs/${etapa.id}.svg"></div>`
+      iconHtml = `<div class="etapa-icone mob-display-none flex justify-center align-items-center"><img width="50px" src="imgs/${etapa.id}.svg"></div>`
     if(statusLabel === "processando" && (currentUser.setor === etapa.setor.toLowerCase() || currentUser.setor === "dev" || etapa.id === "9_DISTRIBUICAO")){
       confirmarNegarBtns = `<div class="flex justify-end gap-5">
                               <button onclick="handleAction(true, '${etapa.id}')" class="status-btn bg-concluido">Concluir Etapa</button>

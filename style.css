@@ -58,12 +58,29 @@ body {
     flex-direction: column;
   }
 
+  .mob-flex-col-rev{
+    flex-direction: column-reverse;
+  }
+
   .mob-gap-2{
     gap: 0.5rem !important;
   }
 
+  .mob-gap-4{
+    gap: 1rem !important;
+  }
+
   .mob-align-it-start{
     align-items: start !important;
+  }
+
+  #sobre-equip, #datas-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mob-display-none{
+    display: none !important;
   }
 }
 .qtd-pc{
