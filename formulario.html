@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOA - Formulário</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+  <header id="header" class="no-margin">
+    <div class="imgs">
+      <img src="imgs/logo fluxando.svg" width="50px">
+      <img src="imgs/logo puc rio ecoa.png" width="125px">
+    </div>
+    <div id="header_username" class="username">
+      
+    </div>
+  </header>
+
+
+  <section class="content flex direction-column gap-5">
+    <!-- Parte cima formulário -->
+    <div id="page-title" class="flex justify-between items-center">
+      <div>
+        <h1 class="text-5xl text-white font-bold">Solicitações</h1>
+        <p id="nome-projeto" class="text-gray-300 weigth-200 text-lg">Selecione o projeto</p>
+      </div>
+      <a id="btn-voltar" href="./index.html" class="text-gray-400 hover:text-white">&larr; Voltar</a>
+    </div>
+
+    <!-- Caixa formuário -->
+    <form id="form_nova_solicitacao" class="box-area gap-10 flex direction-column">
+      <!-- nome solicitante e item -->
+      <div class="form-mob grid grid-cols-2 gap-10 align-items-stretch">
+        <div class="flex direction-column text-box align-self-stretch">
+          <label for="nome_solicitante">Nome do solicitante: </label>
+          <input class="one-line" name="nome_solicitante" id="nome_solicitante" type="text">
+        </div>
+        
+        <div class="flex direction-column text-box">
+          <label for="nome_item">Nome do item: </label>
+          <input class="one-line" name="nome_item" id="nome_item" type="text">
+        </div>
+        
+      </div>
+
+      <!-- qtd, valor e data início -->
+      <div class="flex gap-10 align-items-stretch">
+        <div class="flex direction-column text-box">
+          <label for="quantidade_item">Quantidade: </label>
+          <input class="one-line" name="quantidade_item" id="quantidade_item" type="number" min="0" step="1">
+        </div>
+
+        <div class="flex direction-column text-box align-self-stretch">
+          <label for="valor_estimado">Valor estimado: </label>
+          <input class="one-line" name="valor_estimado" id="valor_estimado" type="number">
+        </div>
+
+        <div class="flex direction-column text-box align-self-stretch">
+          <label for="data_abertura">Data de início: </label>
+          <input class="one-line" name="data_abertura" id="data_abertura" type="date">
+        </div>
+      </div>
+
+      <!-- justificativa -->
+      <div class="flex gap-10 align-items-stretch">
+        <div class="flex direction-column text-box flex-1 min-width-0 align-self-stretch">
+          <label for="justificativa_item">Justificativa: </label>
+          <textarea name="justificativa_item" id="justificativa_item" placeholder="Explique por que esse equipamentp é necessário para a pesquisa ou projeto."></textarea>
+        </div>
+      </div>
+
+      <!-- botão enviar -->
+      <div class="flex flex-1 justify-end min-width-0 align-items-end">
+        <button type="submit" class="submit-button" id="fluxar_btn">Fluxar</button>
+      </div>
+    </form>
+  </section>
+
+  <script type="module" src="script.js"></script>
+  <script>
+    const hoje = new Date().toISOString().split('T')[0];
+    const data_abertura_input = document.getElementById("data_abertura")
+    data_abertura_input.min = hoje
+    data_abertura_input.value = hoje
+  </script>
+</body>
+
+</html>

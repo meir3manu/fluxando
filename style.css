@@ -1,0 +1,475 @@
+body {
+  background: linear-gradient(129deg, #3B4C5A 37.35%, #17232C 100.09%);
+  font-family: 'Helvetica Neue';
+}
+
+@media screen and (max-width: 750px) {
+  #header{
+    flex-direction: column;
+    padding: 20px !important;
+  }
+  #page-title{
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  #cards-proj .icon-prj{
+    width: 20vw;
+  }
+  .card-proj{
+    border-radius: 20px;
+    padding: 5vh !important;
+  }
+  #fluxando_trans{
+    display: none;
+  }
+  #btns-solicitacoes{
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    flex-direction: column-reverse;
+  }
+  .qtd-mob{
+    display: flex !important;
+  }
+  .qtd-pc{
+    display: none !important;
+  }
+  .solicitacao-info{
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .info-area .info {
+    font-weight: 700;
+    font-size: 1rem !important;
+  }
+
+  #form_nova_solicitacao div{
+    display: flex !important;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .etapa-info .responsavel{
+    flex-direction: column;
+  }
+
+  .mob-flex-col{
+    flex-direction: column;
+  }
+
+  .mob-gap-2{
+    gap: 0.5rem !important;
+  }
+
+  .mob-align-it-start{
+    align-items: start !important;
+  }
+}
+.qtd-pc{
+    display: flex;
+}
+.qtd-mob{
+  display: none;
+}
+.disable-hor-scroll{
+  overflow-x: hidden;
+}
+#Fluxando-title{
+  color: #FFF;
+  font-family: "Clash Display Variable";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 101.892%; /* 97.817px */
+} .subtitle{
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+#email, #password, #nome, #setor, #telefone{
+  margin-bottom: 2vw;
+}
+form.login label{
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+#btn-login, #btn-register{
+  border-radius: 37px;
+  padding: 5px 100px;
+  border: 1px solid #ACACAC;
+  background: rgba(217, 217, 217, 0.41);
+}
+#login-box{
+  max-width: 30rem
+}
+.pos-absolute{
+  position: absolute;
+}
+.pos-fixed{
+  position: fixed;
+}
+#login-section{
+  position: relative;
+}
+#login-box{
+  z-index: 1;
+}
+
+#fluxando_trans{
+  bottom: -40vh;
+  right: -35vw;
+  margin: 0px;
+  padding: 0px;
+  z-index: -1;
+}
+
+#error-msg{
+  color: #ff1a66;
+}
+
+.display-none{
+  display: none !important;
+}
+.flex{
+  display: flex;
+}
+.flex-1{
+  flex: 1;
+}
+.flex-2{
+  flex: 1 2;
+}
+.min-width-0{
+  min-width: 0;
+}
+.direction-column{
+  flex-direction: column;
+}
+.justify-row{
+  flex-direction: row;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-end{
+  justify-content: end;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+.justify-stretch{
+  justify-content: stretch;
+}
+.justify-content{
+  justify-content: start;
+}
+.align-self-stretch{
+  align-self: stretch;
+}
+.align-items-stretch{
+  align-items: stretch;
+}
+.flex-start{
+  justify-content: start;
+}
+.align-items-end{
+  align-items: end;
+}
+.align-items-center{
+  align-items: center;
+}
+.custom-card {
+  background-color: #5C6972;
+  border-color: #86949e;
+}
+.no-margin{
+  padding: 0;
+}
+
+.weigth-200{
+  font-weight: 200;
+}
+.weight-600{
+  font-weight: 600;
+}
+.width-100{
+  width: 100%;
+}
+#header{
+  padding: 0vw 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 120px;
+  background-color: #263643;
+  color: #F3F0F0;
+  
+} .content{
+  padding: 5vw 10vw 10vw 10vw;
+}
+
+#parte-cima{
+  margin-bottom: 4vh;
+}
+
+#header .imgs{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#cards-proj .icon-prj{
+  width: 12vw;
+}
+
+.card-proj{
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F0F0F08e;
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.34) 0%, rgba(205, 205, 205, 0.34) 100%);
+  padding: 10vh;
+}
+
+.vw-8{
+  width: 8vw;
+}
+
+.espaco-itens{
+  padding: 2.5vw;
+  border-radius: 30px;
+  border: 0.251px solid #F0F0F08e;
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.19) 0%, rgba(205, 205, 205, 0.19) 100%);
+}
+
+.button{
+  padding: 10px 40px;
+}
+
+.gap-10{
+  gap: 0px;
+}
+
+.active-button{
+  color: #FDFDFD;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+
+  border-radius: 30px;
+  border: 1px solid #F4F4F4;
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.14) 0%, rgba(219, 219, 219, 0.14) 67.35%, rgba(205, 205, 205, 0.14) 100%);
+}
+
+.deactive-button {  
+  color: rgba(253, 253, 253, 0.36);
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+
+  border-radius: 30px;
+  border: 1px solid rgba(244, 244, 244, 0.17);
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.10) 0%, rgba(219, 219, 219, 0.10) 67.35%, rgba(205, 205, 205, 0.10) 100%);;
+}
+
+#add-solicitacao{
+  border-radius: 30px;
+  border: 0.25px solid #F4F4F4;
+  background: rgba(255, 248, 248, 0.76);
+  padding: 0px 15px;
+}
+
+.search{
+  padding: 10px 40px 10px 15px;
+}
+.search input{
+  font-weight: 300;
+  margin-left: 14px;
+  background: transparent;
+  outline: none;
+}
+
+@media screen and (max-width: 730px) {
+  .box-area{
+    padding: 4vw !important;
+  }
+}
+
+.box-area{
+  border-radius: 30px;
+  border: 0.251px solid #F0F0F08e;
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.19) 0%, rgba(205, 205, 205, 0.19) 100%);
+  padding: 2vw;
+}
+
+.etapa-card{
+  border-radius: 15px;
+  background: linear-gradient(93deg, rgba(249, 247, 247, 0.30) 47.56%, rgba(205, 205, 207, 0.30) 70.53%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 30px 20px;
+  color: #282C45;
+}
+
+.etapa-card .title{
+  font-size: 1.5rem;
+}
+
+.text-gray{
+  color: #00000081;
+}
+
+.text-box label{
+  color: #EBEBEB;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.text-box input, .text-box textarea, form.login input, form.cadastro input, form.cadastro select{
+  color: #1C2352;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+
+  width: 100%;
+  display: flex;
+  padding: 1vw 2vh;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  border-radius: 15px 15px 15px 5px;
+  background: linear-gradient(93deg, rgba(249, 247, 247, 0.30) 47.56%, rgba(205, 205, 207, 0.30) 70.53%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  outline: none;
+} .text-box input{
+  height: 43px;
+}
+.text-box textarea{
+  min-height: 200px;
+}
+
+.submit-button{
+  color: #1C2352;
+  font-style: normal;
+  font-weight: 400;
+
+  border-radius: 10px;
+  padding: 0.2rem 3rem;
+  background: #D9D9D9;
+}
+
+#sobre-equip{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #262450;
+}
+.info-area{
+  border-radius: 20px;
+  border: 0.251px solid #f0f0f08e;
+  background: linear-gradient(180deg, rgba(249, 247, 247, 0.42) 0%, rgba(205, 205, 205, 0.42) 100%);
+  padding: 2vw;
+  color: #282C45;
+}
+.info-area .info-title{
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+}
+.info-area .info{
+  font-weight: 700;
+  font-size: 2rem;
+}
+#justificativa_texto{
+  font-size: 1.3rem;
+}
+
+.etapa-box{
+  border-radius: 20px;
+  padding: 20px;
+}
+.box-negado{
+  border: 1px solid rgb(255, 26, 102);
+  background-color: rgb(255, 26, 102, 0.1);
+}
+.box-aguardando{
+  border: 1px solid #989898;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.box-processando{
+  border: 1px solid #FDE800;
+  background-color: rgba(78, 70, 19, 0.1);
+}
+.box-concluido{
+  border: 1px solid #14b8a6;
+  background-color: rgb(19 78 74 / 0.1);
+}
+
+.equip-info{
+  padding-bottom: 20px;
+}
+.bb-negado{
+  border-bottom: 1px solid #ff1a66;
+}
+.bb-aguardando{
+  border-bottom: 1px solid #989898;
+}
+.bb-processando{
+  border-bottom: 1px solid #FDE800;
+}
+.bb-concluido{
+  border-bottom: 1px solid #14b8a6;
+}
+
+.status-btn{
+  padding: 5px 30px;
+  color: #282C45;
+  font-weight: 500;
+  border-radius: 30px;
+}
+.bg-negado{
+  background-color: #ff1a66;
+}
+.bg-aguardando{
+  background-color: #989898;
+}
+.bg-processando{
+  background-color: #FDE800;
+}
+.bg-concluido{
+  background-color: #14b8a6;
+}
+
+.etapa-title{
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #EBEBEB;
+}
+.etapa-desc{
+  font-weight: 300;
+}
+.etapa-info p {
+  font-weight: 300;
+}
+.etapa-info b{
+  font-weight: 500;
+}
+
+#linha{
+  border-left: 2px dotted #ffffff40;
+}
+
+.etapa-obs{
+  background-color: #ffffff14;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #d9d9d9;
+  min-height: 90px;
+}
+
+#mensagem-finalizada{
+  padding: 20px;
+  border-radius: 10px;
+}

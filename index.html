@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOA - Projetos</title>
+  <!-- Importando o Tailwind via CDN (Sem precisar instalar nada) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Importando a fonte Inter (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+</head>
+
+<body class="bg-[#2D3F4B] text-white min-h-screen no-margin">
+  <header id="header" class="no-margin">
+    <div class="imgs">
+      <img src="imgs/logo fluxando.svg" width="50px">
+      <img src="imgs/logo puc rio ecoa.png" width="125px">
+    </div>
+    <div id="header_username" class="username">
+      
+    </div>
+  </header>
+
+  <div class="content">
+    <header class="mb-8">
+      <h1 class="text-5xl font-bold">Solicitações</h1>
+      <p class="text-gray-300 weigth-200 text-lg">Selecione o projeto</p>
+    </header>
+
+    <div id="cards-proj" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card Ignição -->
+      <a href="solicitacoes.html?projeto=ignicao"
+        class="card-proj">
+        <h2 class="text-3xl font-black italic text-[#F1B434] uppercase text-center leading-tight">
+          <img src="imgs/ignicao-logo.png" class="icon-prj">
+        </h2>
+      </a>
+
+      <!-- Card Apple -->
+      <!-- bg-[#5C6972] hover:bg-[#6A7882] transition-colors cursor-pointer rounded-2xl p-8 h-64 flex flex-col items-center justify-center shadow-lg border-2 border-transparent hover:border-gray-400 -->
+      <a href="solicitacoes.html?projeto=apple"
+        class="card-proj">
+        <h2 class="text-xl font-semibold text-center leading-tight">
+          <img src="imgs/apple dev.png" class="icon-prj">
+        </h2>
+      </a>
+
+      <!-- Card TIC -->
+      <a href="solicitacoes.html?projeto=tic"
+        class="card-proj">
+        <div class="flex items-center gap-3">
+          <h2 class="text-xl font-semibold leading-tight">
+            <img src="imgs/tic_em_trilhas-logo-branco.png" class="icon-prj">
+          </h2>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

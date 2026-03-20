@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOA - Status do Processo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Timeline Vertical */
+    #timeline-container::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+      border-left: 2px dashed rgba(255,255,255,0.1);
+      z-index: 0;
+    }
+    
+    .status-concluido { border-color: #10b981 !important; color: #10b981; }
+    .status-atual { border-color: #3b82f6 !important; color: #3b82f6; }
+    .status-pendente { border-color: #374151 !important; color: #6b7280; }
+    .status-reprovado { border-color: #ef4444 !important; color: #ef4444; }
+  </style>
+</head>
+<body class="text-white">
+  
+  <header id="header" class="no-margin">
+    <div class="imgs">
+      <img src="imgs/logo fluxando.svg" width="50px">
+      <img src="imgs/logo puc rio ecoa.png" width="125px">
+    </div>
+    <div id="header_username" class="username">
+      
+    </div>
+  </header>
+
+  <section class="content flex direction-column gap-10">
+    <!-- titulo -->
+    <div id="page-title" class="flex justify-between items-center">
+      <div>
+        <h1 class="text-5xl font-bold">Solicitação</h1>
+        <p id="nome-projeto" class="text-gray-300 weigth-200 text-lg">Selecione o projeto</p>
+      </div>
+      <a id="btn-voltar" href="./index.html" class="text-gray-400 hover:text-white">&larr; Voltar</a>
+    </div>
+
+    <div class="info-area flex direction-column gap-8">
+      <!-- Equip - Qtd - Valor - Responsável atual -->
+      <div id="sobre-equip" class="grid grid-cols-4 gap-10 align-items-stretch">
+        <div class="flex direction-column">
+          <p class="info-title">Equipamento</p>
+          <p id="nome_item" class="info">...</p>
+        </div>
+        <div class="flex direction-column">
+          <p class="info-title">Quantidade</p>
+          <p id="qtd_item" class="info">...</p>
+        </div>
+        <div class="flex direction-column">
+          <p class="info-title">Valor</p>
+          <p id="valor_item" class="info">...</p>
+        </div>
+        <div class="flex direction-column">
+          <p class="info-title">Setor responsável atual</p>
+          <p id="responsavel_atual" class="info">...  </p>
+        </div>
+      </div>
+
+      <!-- Data - Data estimada - Encerramento -->
+      <div class="grid grid-cols-3 gap-10 align-items-stretch">
+        <div class="flex direction-column">
+          <p class="info-title">Data de abertura</p>
+          <p id="data_abertura" class="info">...</p>    
+        </div>
+        <div class="flex direction-column">
+          <p class="info-title">Data estimada</p>
+          <p id="data_previsao" class="info">...</p>
+        </div>
+        <div class="flex direction-column">
+          <p class="info-title">Data de encerramento</p>
+          <p id="data_fechamento" class="info">...</p>
+        </div>
+      </div>
+      <!-- Justificativa -->
+      <div class="flex direction-column">
+        <p class="info-title">Justificativa</p>
+        <p id="justificativa_texto" class="weight-600">...</p>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div id="linha">
+        <div width="100px" style="min-width: 20px;" class="linha-tracejada"></div>
+        <div></div>
+      </div>
+
+      <!-- etapas -->
+      <container id="timeline-container" class="flex direction-column flex-1 gap-10">
+
+      </container>
+
+    </div>
+  </section>
+  
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOA - Solicitações</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#2D3F4B] text-white min-h-screen">
+  <header id="header" class="no-margin">
+    <div class="imgs">
+      <img src="imgs/logo fluxando.svg" width="50px">
+      <img src="imgs/logo puc rio ecoa.png" width="125px">
+    </div>
+    <div id="header_username" class="username">
+      
+    </div>
+  </header>
+
+  <!---->
+  <section class="content flex direction-column gap-5">
+    <!-- titulo -->
+    <div id="page-title" class="flex justify-between items-center">
+      <div>
+        <h1 class="text-5xl font-bold">Solicitações</h1>
+        <p id="nome-projeto" class="text-gray-300 weigth-200 text-lg">Selecione o projeto</p>
+      </div>
+      <a id="btn-voltar" href="./index.html" class="text-gray-400 hover:text-white">&larr; Voltar</a>
+    </div>
+    <!-- botões -->
+    <div id="btns-solicitacoes" class="flex justify-space-between">
+      <div class="flex justify-center gap-5">
+        <button class="active-button button" id="btn-tab-ativas">Ativas</button>
+        <button class="deactive-button button" id="btn-tab-finalizadas">Finalizadas</button>
+      </div>
+
+      <div class="flex justify-center gap-5">
+
+        <div class="deactive-button flex search justify-center">
+          <img src="imgs/search_icon.svg">
+          <input id="search-solicitacao" type="text" placeholder="Pesquisar...">
+        </div>
+        
+        <a href="formulario.html" id="add-solicitacao" class="flex justify-center">
+          <img width="45px" src="imgs/plus_icon.svg">
+        </a>
+      </div>
+
+    </div>
+    <!-- area das solicitações -->
+     <div id="area-solicitacao" class="box-area flex direction-column gap-5">
+
+     </div>
+  </section>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
