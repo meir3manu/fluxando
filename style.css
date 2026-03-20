@@ -14,7 +14,7 @@ body {
     gap: 0.5rem;
   }
   #cards-proj .icon-prj{
-    width: 20vw;
+    width: 20vw !important;
   }
   .card-proj{
     border-radius: 20px;

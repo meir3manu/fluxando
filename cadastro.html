@@ -41,21 +41,21 @@
                 <input class="text-box" id="nome" type="text">
                 <label for="email">E-mail Institucional</label>
                 <input class="text-box" id="email" type="email">
-                <label for="telefone">Celular / Telefone</label>
-                <input class="text-box" id="telefone" type="tel" placeholder="(99) 99999-9999" maxlength="15">
+                <label class="display-none" for="telefone">Celular / Telefone</label>
+                <input class="text-box display-none" id="telefone" value="99999999999" type="tel" placeholder="(99) 99999-9999" maxlength="15">
                 <div class="flex mob-flex-col flex-1 gap-2">
                     <div class="flex flex-1 direction-column gap-2">
                         <label for="password">Senha</label>
                         <input class="text-box" id="password" type="password">
                     </div>
-                    <div class="flex flex-1 direction-column gap-2">
+                    <div class="display-none flex flex-1 direction-column gap-2">
                         <label for="data_nascimento">Data de nascimento</label>
                         <input class="text-box" id="data_nascimento" type="date">
                     </div>
                 </div>
-                <label for="setor">Setor</label>
+                <label class="display-none" for="setor">Setor</label>
 
-                <select name="setor" id="setor">
+                <select class="display-none" name="setor" id="setor">
                     <option value="DEV">DEV</option>
                     <option value="Pesquisador" selected>Pesquisador</option>
                     <option value="ADM / Financeiro">ADM / Financeiro</option>
