@@ -43,7 +43,7 @@
                 <input class="text-box" id="email" type="email">
                 <label for="telefone">Celular / Telefone</label>
                 <input class="text-box" id="telefone" type="tel" placeholder="(99) 99999-9999" maxlength="15">
-                <div class="flex flex-1 gap-2">
+                <div class="flex mob-flex-col flex-1 gap-2">
                     <div class="flex flex-1 direction-column gap-2">
                         <label for="password">Senha</label>
                         <input class="text-box" id="password" type="password">
@@ -57,7 +57,7 @@
 
                 <select name="setor" id="setor">
                     <option value="DEV">DEV</option>
-                    <option value="Pesquisador">Pesquisador</option>
+                    <option value="Pesquisador" selected>Pesquisador</option>
                     <option value="ADM / Financeiro">ADM / Financeiro</option>
                     <option value="Logística">Logística</option>
                     <option value="Infraestrutura">Infraestrutura</option>
@@ -192,6 +192,23 @@
                 btn.textContent = 'Se juntar ao fluxo';
             }
         });
+        getToday()
+
+        function getToday(){
+            // 1. Obter a data atual
+            const hoje = new Date();
+        
+            // 2. Formatar para YYYY-MM-DD
+            const ano = hoje.getFullYear();
+            // getMonth() retorna de 0-11, adicionamos 1. padStart garante 2 dígitos.
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            
+            const dataFormatada = `${ano}-${mes}-${dia}`;
+            
+            // 3. Definir o valor do input
+            document.getElementById('data_nascimento').value = dataFormatada;
+        }
     </script>
 </body>
 </html>
